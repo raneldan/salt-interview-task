@@ -1,5 +1,5 @@
 import { ParamType } from "../enums/ParamType.enum";
-import { ValidateParamType, IntegerParamType, StringParamType, BooleanParamType, ListParamType, DateParamType, EmailParamType, UUIDParamType, AuthTokenParamType } from "./ParamType";
+import { ValidateParamType, IntegerParamType, StringParamType, BooleanParamType, ListParamType, DateParamType, EmailParamType, UUIDParamType, AuthTokenParamType, IpAdress } from "./ParamType";
 
 export default class ParamTypeFactory {
     static createTypeValidationFunction(paramType: string): ValidateParamType {
@@ -20,6 +20,8 @@ export default class ParamTypeFactory {
                 return UUIDParamType;
             case ParamType.AUTH_TOKEN:
                 return AuthTokenParamType;
+            case ParamType.IP_ADDRESS:
+                return IpAdress;
             default:
                 return undefined;
         }

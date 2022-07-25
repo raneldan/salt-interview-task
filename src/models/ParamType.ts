@@ -39,3 +39,9 @@ export const AuthTokenParamType : ValidateParamType = (param: any): boolean => {
     const re: RegExp = new RegExp(tokenRegex);
     return  re.test(param);
 }
+
+export const IpAdress : ValidateParamType = (param : any): boolean => {
+    const ipRegex:string = " [[0-9]{3}[.]]{4}";
+    const re: RegExp = new RegExp(ipRegex);
+    return  re.test(param); 
+}

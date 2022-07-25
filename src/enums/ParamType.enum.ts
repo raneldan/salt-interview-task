@@ -7,4 +7,5 @@ export enum ParamType {
     EMAIL = 'Email',
     UUID = 'UUID',
     AUTH_TOKEN = 'Auth-Token',
+    IP_ADDRESS = 'Ip_Address',
 }
